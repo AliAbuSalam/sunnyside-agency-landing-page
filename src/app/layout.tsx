@@ -1,8 +1,14 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Barlow } from 'next/font/google'
+import Script from 'next/script';
 
-const inter = Inter({ subsets: ['latin'] })
+import Navbar from '@/components/Navbar';
+
+const barlow = Barlow({ 
+  subsets: ['latin'],
+  weight: '600' 
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +22,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={barlow.className}>
+        <Navbar />
+        {children}
+        <Script src='https://kit.fontawesome.com/0c08249450.js' crossOrigin='anonymous'></Script>
+      </body>
     </html>
   )
 }
