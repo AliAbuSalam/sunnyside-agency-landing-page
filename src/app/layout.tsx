@@ -1,7 +1,6 @@
 import '@/styles/global.scss';
 import type { Metadata } from 'next'
 import { Barlow } from 'next/font/google'
-import Script from 'next/script';
 
 import Navbar from '@/components/Navbar';
 
@@ -23,9 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={barlow.className}>
-        <Navbar />
         {children}
-        <Script src='https://kit.fontawesome.com/0c08249450.js' crossOrigin='anonymous'></Script>
       </body>
     </html>
   )
