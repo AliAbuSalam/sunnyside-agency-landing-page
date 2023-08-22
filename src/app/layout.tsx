@@ -2,7 +2,11 @@ import '@/styles/globals.scss';
 import type { Metadata } from 'next'
 import { Barlow } from 'next/font/google'
 
-import Navbar from '@/components/Navbar';
+//--------------------- settings for fontawesome-------------------
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
+//-----------------------------------------------------------------
 
 const barlow = Barlow({ 
   subsets: ['latin'],
