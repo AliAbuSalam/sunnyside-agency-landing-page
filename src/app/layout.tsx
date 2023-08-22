@@ -1,4 +1,4 @@
-import './globals.css'
+import '@/styles/global.scss';
 import type { Metadata } from 'next'
 import { Barlow } from 'next/font/google'
 import Script from 'next/script';
