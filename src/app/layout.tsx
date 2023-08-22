@@ -8,6 +8,8 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 //-----------------------------------------------------------------
 
+import Navbar from '@/components/Navbar';
+
 const barlow = Barlow({ 
   subsets: ['latin'],
   weight: '600' 
@@ -26,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={barlow.className}>
+        <Navbar />
         {children}
       </body>
     </html>
