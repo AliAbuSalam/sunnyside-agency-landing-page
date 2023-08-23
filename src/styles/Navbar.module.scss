@@ -3,13 +3,11 @@
   display: flex;
   flex-direction: row;
   color: hsl(0, 0%, 100%);
+  padding: 1.5rem 1rem;
 
   div {
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
-  }
-
-  i {
   }
 }
