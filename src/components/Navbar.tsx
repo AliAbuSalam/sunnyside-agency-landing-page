@@ -12,9 +12,11 @@ const barlow = Barlow({
 const Navbar = () => {
   return (
     <div className={`${styles.container} ${barlow.className}`}>
-      sunnyside
+      <span>
+        sunnyside
+      </span>
       <div>
-        <FontAwesomeIcon icon={faBars} size='lg'/>
+        <FontAwesomeIcon icon={faBars} size='xl'/>
       </div>
     </div>
   );
