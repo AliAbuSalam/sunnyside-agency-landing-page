@@ -1,4 +1,9 @@
 .container {
   display: grid;
   grid-template-columns: 1fr;
+
+  div {
+    background-image: url('../../public/mobile/image-header.jpg');
+    background-size: cover;
+  }
 }

@@ -1,0 +1,17 @@
+.firstbox-container {
+
+  .img-container {
+    background-image: none;
+    border: 2px solid red;
+    margin: 0 auto;
+    width: 100%;
+    height: 15rem;
+
+    .image {
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+      height: auto;   
+    }
+  }
+}
