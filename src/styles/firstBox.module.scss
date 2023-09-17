@@ -1,3 +1,5 @@
+@use 'colors';
+
 .firstbox-container {
 
   .img-container {
@@ -8,10 +10,18 @@
     height: 15rem;
 
     .image {
+      fill: colors.$white;
       display: block;
       margin: 0 auto;
       width: 50%;
       height: auto;   
     }
+
+  }
+
+  .h1 {
+    color: colors.$white;
+    text-align: center;
+    letter-spacing: 0.5rem;
   }
 }
