@@ -1,5 +1,7 @@
+@use 'colors';
+
 .container {
-  background-color: hsl(206, 91%, 60%);
+  background-color: colors.$background-blue;
   display: flex;
   flex-direction: row;
   color: hsl(0, 0%, 100%);
