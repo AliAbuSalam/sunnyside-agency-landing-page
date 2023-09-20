@@ -1,6 +1,9 @@
 @use 'colors';
 
 .firstbox-container {
+  background-image: url('../../public/mobile/image-header.jpg');
+  background-size: cover;
+  background-position: bottom;
 
   .img-container {
     background-image: none;
