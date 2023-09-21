@@ -4,11 +4,12 @@
   background-image: url('../../public/mobile/image-header.jpg');
   background-size: cover;
   background-position: bottom;
+  padding-top: 2.5rem;
 
   .img-container {
     background-image: none;
-    border: 2px solid red;
-    margin: 0 auto;
+    margin: 1rem auto;
+    padding-top: 2rem;
     width: 100%;
     height: 15rem;
 
@@ -26,5 +27,6 @@
     color: colors.$white;
     text-align: center;
     letter-spacing: 0.5rem;
+    margin: 0;
   }
 }
