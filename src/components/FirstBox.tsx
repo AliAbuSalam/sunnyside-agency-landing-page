@@ -1,5 +1,4 @@
 import { Fraunces } from "next/font/google";
-import Image from "next/image";
 
 import styles from '@/styles/firstBox.module.scss';
 import WhiteArrow from './WhiteArrow';
