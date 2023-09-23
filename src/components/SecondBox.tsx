@@ -9,7 +9,7 @@ const SecondBox = () => {
       <Image 
         alt='image of an egg'
         src={Egg}
-        
+        className={styles.img}
         layout='responsive'
         sizes='(max-width: 351px) 350px'
       />
