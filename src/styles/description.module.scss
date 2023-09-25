@@ -1,0 +1,20 @@
+@use 'colors';
+
+.container {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+
+  .header {
+    color: colors.$very-dark-desaturated-blue
+  }
+
+  .description {
+    color: colors.$dark-grayish-blue;
+  }
+
+  .link {
+    display: block;
+    margin-top: 1rem;
+  }
+}
