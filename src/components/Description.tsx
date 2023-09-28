@@ -17,9 +17,10 @@ interface DescriptionProps {
   header: string;
   description: string;
   hyperlink?: string;
+  highlightColor?: string;
 }
 
-const Description: FC<DescriptionProps> = ({ header, description, hyperlink}) => {
+const Description: FC<DescriptionProps> = ({ header, description, hyperlink, highlightColor}) => {
   return(
     <div className={styles.container}>
       <h1 className={`${fraunces.className} ${styles.header}`}>
@@ -28,9 +29,12 @@ const Description: FC<DescriptionProps> = ({ header, description, hyperlink}) =>
       <div className={`${barlow.className} ${styles.description}`}>
         {description}
       </div>
-      <a href={hyperlink} className={`${barlow.className} ${styles.link}`}>
-        LEARN MORE
-      </a>
+      <div className={styles['link-container']}>
+        <a href={hyperlink} className={`${barlow.className} ${styles.link}`}>
+          LEARN MORE
+        </a>
+        <div className={styles.highlighter} style={{ backgroundColor: highlightColor}}></div>
+      </div>
     </div>
   );
 };

@@ -13,8 +13,37 @@
     color: colors.$dark-grayish-blue;
   }
 
-  .link {
-    display: block;
+  .link-container {
+    width: 35%;
+    margin: 0 auto;
     margin-top: 1rem;
+    display: grid;
+    align-items: center;
+    
+    .link {
+      grid-column: 1;
+      grid-row: 1;
+      text-decoration: none;
+    }
+  
+    .highlighter {
+      grid-column: 1;
+      grid-row: 1;
+      z-index: -1;
+      position: relative;
+      top: 0.4rem;
+      width: 100%;
+      height: 0.5rem;
+      border-radius: 20px;
+      background-color: red;
+      opacity: 50%;
+    }
   }
+
+  .link-container:hover {
+    .highlighter {
+      opacity: 100%;
+    }
+  }
+
 }

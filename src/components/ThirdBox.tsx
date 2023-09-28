@@ -1,4 +1,5 @@
 import Description from './Description';
+import styles from '@/styles/thirdBox.module.scss';
 
 const ThirdBox = () => {
   const header = 'Transform your brand';
@@ -9,6 +10,7 @@ const ThirdBox = () => {
       header={header}
       description={description}
       hyperlink=''
+      highlightColor={styles.yellow}
     />
   );
 };
