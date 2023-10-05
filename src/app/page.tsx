@@ -3,6 +3,7 @@ import styles from "@/styles/page.module.scss";
 import FirstBox from "@/components/FirstBox";
 import SecondBox from '@/components/SecondBox';
 import ThirdBox from '@/components/ThirdBox';
+import FourthBox from "@/components/FourthBox";
 
 const Home = () => {
   return(
@@ -15,6 +16,9 @@ const Home = () => {
       </div>
       <div>
         <ThirdBox />
+      </div>
+      <div>
+        <FourthBox />
       </div>
     </div>
   );
