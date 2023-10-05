@@ -1,0 +1,5 @@
+@use 'colors';
+
+:export {
+  red: colors.$soft-red;
+}
