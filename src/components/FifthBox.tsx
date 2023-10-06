@@ -10,7 +10,8 @@ const FifthBox = () => {
       highlightColor={styles.red}
     >
       Using a collaborative formula of 
-      <br />designers, researchers, and photographers, videographers, and copywriters, we&apos;ll build and extend your brand in digital places
+      <br />designers, researchers, and photographers, videographers, and copywriters, 
+      we&apos;ll build and extend your brand in digital places.
     </Description>
   );
 };
