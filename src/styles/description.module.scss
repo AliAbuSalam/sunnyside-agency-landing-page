@@ -11,10 +11,12 @@
 
   .description {
     color: colors.$dark-grayish-blue;
+    line-height: 1.8rem;
+    padding: 0;
   }
 
   .link-container {
-    width: 35%;
+    width: 40%;
     margin: 0 auto;
     margin-top: 1rem;
     display: grid;
