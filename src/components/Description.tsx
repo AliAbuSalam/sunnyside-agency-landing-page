@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import React, { FC, ReactNode } from 'react';
 import { Barlow, Fraunces } from 'next/font/google';
 
 import styles from '@/styles/description.module.scss'
@@ -22,9 +22,9 @@ interface DescriptionProps {
   header: string;
   hyperlink?: string;
   highlightColor?: string;
-  headerStyle?: {};
-  descriptionStyle?: {};
-  children?: ReactNode
+  headerStyle?: React.CSSProperties;
+  descriptionStyle?: React.CSSProperties;
+  children?: ReactNode;
 }
 
 const Description: FC<DescriptionProps> = 
