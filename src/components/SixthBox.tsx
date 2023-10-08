@@ -1,6 +1,6 @@
 import DescriptionWithBackground from "./DescriptionWithBackground";
 
-import cherry from '../../public/mobile/image-graphic-design.jpg';
+import Cherry from '../../public/mobile/image-graphic-design.jpg';
 import styles from '@/styles/sixthBox.module.scss';
 
 const SixthBox = () => {
@@ -8,7 +8,7 @@ const SixthBox = () => {
   return(
     <DescriptionWithBackground
       title={title}
-      background={cherry}
+      background={Cherry}
       backgroundAlt="close up image of cherries"
       textColor={styles.color}
     >
