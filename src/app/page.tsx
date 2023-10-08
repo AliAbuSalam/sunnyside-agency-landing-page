@@ -6,6 +6,7 @@ import ThirdBox from '@/components/ThirdBox';
 import FourthBox from "@/components/FourthBox";
 import FifthBox from '@/components/FifthBox';
 import SixthBox from '@/components/SixthBox';
+import SeventhBox from '@/components/SeventhBox';
 
 const Home = () => {
   return(
@@ -27,6 +28,9 @@ const Home = () => {
       </div>
       <div>
         <SixthBox />
+      </div>
+      <div>
+        <SeventhBox />
       </div>
     </div>
   );
