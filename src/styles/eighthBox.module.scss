@@ -1,0 +1,15 @@
+.container {
+  text-align: center;
+
+  h4 {
+    letter-spacing: 0.15rem;
+    color: hsl(210, 4%, 67%);
+    margin: 4rem 0 0 0;
+  }
+
+  .testimonial-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
