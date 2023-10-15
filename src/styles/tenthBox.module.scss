@@ -1,0 +1,38 @@
+@use 'colors';
+
+.container {
+  background-color: colors.$lighter-cyan;
+  text-align: center;
+  color: colors.$dark-moderate-cyan;
+  
+  h1 {
+    margin: 0;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .link-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .icon-container {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    padding: 5rem 0 3.5rem 0;
+    margin: 0 auto;
+
+    .icon {
+      margin-right: 1.5rem;
+    }
+
+    .icon:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+:export {
+  cyanColor: colors.$dark-moderate-cyan
+};
