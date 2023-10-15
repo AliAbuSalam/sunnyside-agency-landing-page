@@ -9,7 +9,7 @@ config.autoAddCss = false
 //-----------------------------------------------------------------
 
 import Navbar from '@/components/Navbar';
-import TenthBox from '@/components/TenthBox';
+import Footer from '@/components/Footer';
 
 const barlow = Barlow({ 
   subsets: ['latin'],
@@ -31,7 +31,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
-        <TenthBox />
+        <Footer />
       </body>
     </html>
   )

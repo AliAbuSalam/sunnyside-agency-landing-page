@@ -7,7 +7,7 @@ import {
   faPinterest
  } from '@fortawesome/free-brands-svg-icons';
 
-import styles from '@/styles/tenthBox.module.scss';
+import styles from '@/styles/footer.module.scss';
 
 const barlow = Barlow({
   subsets: ['latin'],
