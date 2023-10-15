@@ -9,7 +9,6 @@ import SixthBox from '@/components/SixthBox';
 import SeventhBox from '@/components/SeventhBox';
 import EighthBox from "@/components/EighthBox";
 import NinthBox from "@/components/NinthBox";
-import TenthBox from '@/components/TenthBox';
 
 const Home = () => {
   return(
@@ -40,9 +39,6 @@ const Home = () => {
       </div>
       <div>
         <NinthBox />
-      </div>
-      <div>
-        <TenthBox />
       </div>
     </div>
   );
