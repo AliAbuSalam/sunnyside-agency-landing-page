@@ -6,10 +6,6 @@ import Orange from '../../public/mobile/image-gallery-orange.jpg';
 import Cone from '../../public/mobile/image-gallery-cone.jpg';
 import SugarCubes from '../../public/mobile/image-gallery-sugar-cubes.jpg';
 
-const coloredBackground = (color: string) => ({
-  backgroundColor: color,
-});
-
 const imagesData = [
   {
     src: Milk,
