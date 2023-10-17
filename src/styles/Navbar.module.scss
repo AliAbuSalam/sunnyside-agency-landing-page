@@ -1,6 +1,6 @@
 @use 'colors';
 
-.container {
+.nav-container {
   background-color: colors.$background-blue;
   display: flex;
   flex-direction: row;
@@ -16,4 +16,40 @@
   span {
     font-size: 1.2rem;
   }
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: colors.$dark-grayish-blue;
+  position: absolute;
+  background-color: white;
+  width: 90vw;
+  margin: 0 5vw;
+
+  .dropdown-option {
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    width: 35%;
+    border-radius: 35px;
+
+  }
+
+  .dropdown-option:last-child {
+    margin-bottom: 1rem;
+  }
+
+  .dropdown-option:hover {
+    background-color: colors.$yellow;
+    color: black;
+    text-transform: uppercase;
+  }
+}
+
+.hidden {
+  display: none
 }
