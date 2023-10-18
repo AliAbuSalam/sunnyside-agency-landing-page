@@ -18,15 +18,28 @@
   }
 }
 
+.dropdown-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin: 0 5vw;
+}
+
+.dropdown-arrow {
+  width: 0;
+  height: 0;
+  border-bottom: 25px solid white;
+  border-left: 25px solid transparent;
+  align-self: flex-end;
+}
+
 .dropdown {
   display: flex;
   flex-direction: column;
   text-align: center;
   color: colors.$dark-grayish-blue;
-  position: absolute;
   background-color: white;
-  width: 90vw;
-  margin: 0 5vw;
 
   .dropdown-option {
     box-sizing: border-box;

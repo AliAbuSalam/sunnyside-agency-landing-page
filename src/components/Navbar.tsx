@@ -22,10 +22,13 @@ const Navbar = () => {
           <FontAwesomeIcon icon={faBars} size='xl'/>
         </div>
       </div>
-      <div className={styles.dropdown}>
-        {dropdownOptions.map(opt => (
-          <div key={opt} className={styles['dropdown-option']}>{opt}</div>
-        ))}
+      <div className={styles['dropdown-container']}>
+        <div className={styles['dropdown-arrow']}></div>
+        <div className={styles.dropdown}>
+          {dropdownOptions.map(opt => (
+            <div key={opt} className={styles['dropdown-option']}>{opt}</div>
+          ))}
+        </div>
       </div>
     </div>
   );
