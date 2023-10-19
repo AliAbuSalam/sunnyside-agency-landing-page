@@ -1,5 +1,10 @@
 @use 'colors';
 
+@mixin hover-effect {
+  cursor: pointer;
+  color: colors.$white;
+}
+
 .container {
   background-color: colors.$lighter-cyan;
   text-align: center;
@@ -14,6 +19,10 @@
   .link-container {
     display: flex;
     justify-content: space-around;
+
+    .link:hover {
+      @include hover-effect();
+    }
   }
 
   .icon-container {
@@ -25,6 +34,11 @@
 
     .icon {
       margin-right: 1.5rem;
+      color: colors.$dark-moderate-cyan;
+    }
+
+    .icon:hover {
+      @include hover-effect()
     }
 
     .icon:last-child {
@@ -32,7 +46,3 @@
     }
   }
 }
-
-:export {
-  cyanColor: colors.$dark-moderate-cyan
-};

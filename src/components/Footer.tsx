@@ -17,7 +17,9 @@ const barlow = Barlow({
 const barlowSmall = Barlow({
   subsets: ['latin'],
   weight: '600'
-})
+});
+
+const linkList = ['About', 'Service', 'Projects']
 
 const iconList = [
   faFacebookSquare,
@@ -31,13 +33,13 @@ const TenthBox = () => {
     <div className={styles.container}>
       <h1 className={barlow.className}>sunnyside</h1>
       <div className={`${styles['link-container']} ${barlowSmall.className}`}>
-        <div>About</div>
-        <div>Service</div>
-        <div>Projects</div>
+        {linkList.map(link => (
+          <div key={link} className={styles.link}>{link}</div>
+        ))}
       </div>
       <div className={styles['icon-container']}>
         {iconList.map((icon, index) => (
-          <FontAwesomeIcon key={index} className={styles.icon} icon={icon} size='lg' style={{ color: styles.cyanColor }}/>
+          <FontAwesomeIcon key={index} className={styles.icon} icon={icon} size='lg'/>
         ))}
       </div>
     </div>
