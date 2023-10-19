@@ -1,3 +1,6 @@
+'use client'
+
+import React, { useState, useRef, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Barlow } from 'next/font/google';
@@ -12,6 +15,31 @@ const barlow = Barlow({
 const dropdownOptions = ['About', 'Services', 'Projects', 'Contact'];
 
 const Navbar = () => {
+  const [toggleMenu, setToggleMenu] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const handleMenuClick = () => {
+    setToggleMenu(!toggleMenu);
+  };
+
+  const handleMenuPressed = (event: React.MouseEvent) => {
+    //prevents menu click event from being fired when dropdown is active
+    if(document.activeElement === dropdownRef.current){
+      event.preventDefault();
+    }
+  }
+  
+  const handleMenuBlur = () => {
+    setToggleMenu(false);
+  }
+
+  useEffect(() => {
+    //focus the dropdown menu so it can be closed by firing on blur event when unfocused
+    if(toggleMenu){
+      dropdownRef.current?.focus();
+    }
+  }, [toggleMenu]);
+
   return (
     <div className={barlow.className}>
       <div className={styles['nav-container']}>
@@ -19,10 +47,22 @@ const Navbar = () => {
           sunnyside
         </span>
         <div>
-          <FontAwesomeIcon icon={faBars} size='xl'/>
+          <FontAwesomeIcon 
+            icon={faBars} 
+            size='xl' 
+            onClick={handleMenuClick}
+            onMouseDown={handleMenuPressed}
+            className={`${toggleMenu ? styles['greyed-out'] : ''} ${styles['menu-icon']}`}
+          />
         </div>
       </div>
-      <div className={styles['dropdown-container']}>
+      <div 
+        className={`${styles['dropdown-container']} ${!toggleMenu ? styles.hidden : ''}`}
+        tabIndex={0}
+        onBlur={handleMenuBlur}
+        id='MENU'
+        ref={dropdownRef}
+      >
         <div className={styles['dropdown-arrow']}></div>
         <div className={styles.dropdown}>
           {dropdownOptions.map(opt => (
