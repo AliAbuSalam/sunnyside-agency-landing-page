@@ -11,8 +11,7 @@ const fraunces = Fraunces({
 
 
 const FirstBox = () => {
-  console.log('styles: ', styles);
-  return(
+    return(
     <div className={styles['firstbox-container']}>
       <h1 className={`${styles.h1} ${fraunces.className}`}>
         WE ARE <br />CREATIVES
