@@ -1,8 +1,6 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Barlow } from 'next/font/google';
 
 import NavOptions from './NavOptions';
@@ -18,17 +16,6 @@ const dropdownOptions = ['About', 'Services', 'Projects', 'Contact'];
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-
-  const handleMenuClick = () => {
-    setToggleMenu(!toggleMenu);
-  };
-
-  const handleMenuPressed = (event: React.MouseEvent) => {
-    //prevents menu click event from being fired when dropdown is active
-    if(document.activeElement === dropdownRef.current){
-      event.preventDefault();
-    }
-  }
   
   const handleMenuBlur = () => {
     setToggleMenu(false);
