@@ -5,3 +5,15 @@
 .greyed-out {
   opacity: 50%;
 }
+
+@media (min-width: 352px){
+  .options-container {
+    display: flex;
+    flex-direction: row;
+    float: right;
+  
+    .option {
+      margin-right: 1.5rem;
+    }
+  }
+}

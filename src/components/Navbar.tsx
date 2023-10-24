@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Barlow } from 'next/font/google';
 
+import NavOptions from './NavOptions';
 import styles from '@/styles/Navbar.module.scss';
 
 const barlow = Barlow({ 
@@ -46,15 +47,12 @@ const Navbar = () => {
         <span>
           sunnyside
         </span>
-        <div>
-          <FontAwesomeIcon 
-            icon={faBars} 
-            size='xl' 
-            onClick={handleMenuClick}
-            onMouseDown={handleMenuPressed}
-            className={`${toggleMenu ? styles['greyed-out'] : ''} ${styles['menu-icon']}`}
-          />
-        </div>
+        <NavOptions 
+          options={dropdownOptions}
+          toggleMenu={toggleMenu}
+          setToggleMenu={setToggleMenu}
+          dropdownRef={dropdownRef}
+        />
       </div>
       <div 
         className={`${styles['dropdown-container']} ${!toggleMenu ? styles.hidden : ''}`}

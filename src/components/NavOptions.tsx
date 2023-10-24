@@ -12,7 +12,7 @@ interface navOptionsProps {
 }
 
 const NavOptions:FC<navOptionsProps> = ({ options, toggleMenu, setToggleMenu, dropdownRef }) => {
-  const screenWidth = document.documentElement.clientWidth;
+  const screenWidth = document.documentElement.clientWidth;  
 
   const handleMenuClick = () => {
     setToggleMenu(!toggleMenu)
@@ -27,7 +27,7 @@ const NavOptions:FC<navOptionsProps> = ({ options, toggleMenu, setToggleMenu, dr
 
   return(
     <div>
-      {screenWidth >= 351 ? 
+      {screenWidth <= 351 ? 
         <FontAwesomeIcon 
           icon={faBars} 
           size='xl' 
@@ -35,8 +35,8 @@ const NavOptions:FC<navOptionsProps> = ({ options, toggleMenu, setToggleMenu, dr
           onMouseDown={handleMenuPressed}
           className={`${toggleMenu ? styles['greyed-out'] : ''} ${styles['menu-icon']}`}
       /> 
-      :<div>
-        {options.map(option => <div key={option}>{option}</div>)}
+      :<div className={styles['options-container']}>
+        {options.map(option => <div key={option} className={styles.option}>{option}</div>)}
       </div>
       
       }
