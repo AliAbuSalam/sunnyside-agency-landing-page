@@ -1,8 +1,10 @@
-import React, { FC, Dispatch, SetStateAction } from 'react';
+'use client'
+import React, { FC, Dispatch, useState, SetStateAction, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import styles from '@/styles/navOptions.module.scss';
+import { SCREEN_WIDTH_PHONE } from '@/lib/screenSizes';
 
 interface navOptionsProps {
   options: string[];
@@ -12,7 +14,7 @@ interface navOptionsProps {
 }
 
 const NavOptions:FC<navOptionsProps> = ({ options, toggleMenu, setToggleMenu, dropdownRef }) => {
-  const screenWidth = document.documentElement.clientWidth;  
+  const [useSummarizedNavOptions, setUseSummarizedNavOptions] = useState(true);
 
   const handleMenuClick = () => {
     setToggleMenu(!toggleMenu)
@@ -25,9 +27,27 @@ const NavOptions:FC<navOptionsProps> = ({ options, toggleMenu, setToggleMenu, dr
     }
   };
 
+  const handleResizeWindow = () => {
+    if(typeof document === 'undefined') return;
+    const documentWidth = document.documentElement.clientWidth;
+    if(documentWidth <= SCREEN_WIDTH_PHONE){
+      setUseSummarizedNavOptions(true);
+    } else {
+      setUseSummarizedNavOptions(false);
+    }
+  };
+
+  useEffect(() => {
+    if(typeof document !== 'undefined'){
+      window.addEventListener('resize', handleResizeWindow);
+      handleResizeWindow();
+      return () => window.removeEventListener('resize', handleResizeWindow);
+    }
+  }, []);
+
   return(
-    <div>
-      {screenWidth <= 351 ? 
+    <div onResize={handleResizeWindow}>
+      {useSummarizedNavOptions ?
         <FontAwesomeIcon 
           icon={faBars} 
           size='xl' 
