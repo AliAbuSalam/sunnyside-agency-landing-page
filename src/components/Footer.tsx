@@ -1,4 +1,3 @@
-import { Barlow } from 'next/font/google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faFacebookSquare, 
@@ -9,16 +8,6 @@ import {
 
 import styles from '@/styles/footer.module.scss';
 
-const barlow = Barlow({
-  subsets: ['latin'],
-  weight: '900',
-});
-
-const barlowSmall = Barlow({
-  subsets: ['latin'],
-  weight: '600'
-});
-
 const linkList = ['About', 'Service', 'Projects']
 
 const iconList = [
@@ -28,11 +17,11 @@ const iconList = [
   faPinterest
 ];
 
-const TenthBox = () => {
+const Footer = () => {
   return(
     <div className={styles.container}>
-      <h1 className={barlow.className}>sunnyside</h1>
-      <div className={`${styles['link-container']} ${barlowSmall.className}`}>
+      <h1>sunnyside</h1>
+      <div className={styles['link-container']}>
         {linkList.map(link => (
           <div key={link} className={styles.link}>{link}</div>
         ))}
@@ -46,4 +35,4 @@ const TenthBox = () => {
   );
 };
 
-export default TenthBox;
+export default Footer;

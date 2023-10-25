@@ -1,15 +1,10 @@
-import { Fraunces } from 'next/font/google';
+import { fraunces } from '@/utils/fonts';
 
 import ClientTestimony from "./ClientTestimony";
 import styles from '@/styles/eighthBox.module.scss';
 import Emily from '../../public/image-emily.jpg';
 import Thomas from '../../public/image-thomas.jpg';
 import Jennie from '../../public/image-jennie.jpg';
-
-const fraunces = Fraunces({
-  subsets: ['latin'],
-  weight: '700'
-});
 
 const clientsData = [
   {

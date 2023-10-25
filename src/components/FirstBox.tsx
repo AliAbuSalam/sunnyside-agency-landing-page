@@ -1,14 +1,6 @@
-import { Fraunces } from "next/font/google";
-
 import styles from '@/styles/firstBox.module.scss';
 import WhiteArrow from './WhiteArrow';
-
-const fraunces = Fraunces({ 
-  weight: '900',
-  subsets: ['latin']
- });
-
-
+import { fraunces } from '@/utils/fonts';
 
 const FirstBox = () => {
     return(

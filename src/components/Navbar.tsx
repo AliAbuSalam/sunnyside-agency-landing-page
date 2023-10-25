@@ -1,15 +1,9 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Barlow } from 'next/font/google';
 
 import NavOptions from './NavOptions';
 import styles from '@/styles/Navbar.module.scss';
-
-const barlow = Barlow({ 
-  subsets: ['latin'],
-  weight: '600', 
-});
 
 const dropdownOptions = ['About', 'Services', 'Projects', 'Contact'];
 
@@ -29,7 +23,7 @@ const Navbar = () => {
   }, [toggleMenu]);
 
   return (
-    <div className={barlow.className}>
+    <div>
       <div className={styles['nav-container']}>
         <span>
           sunnyside

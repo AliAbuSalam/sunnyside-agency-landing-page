@@ -2,17 +2,7 @@ import { FC, ReactNode } from 'react';
 import Image, { StaticImageData } from "next/image";
 
 import styles from '@/styles/clientTestimony.module.scss';
-import { Barlow, Fraunces } from 'next/font/google';
-
-const barlow = Barlow({
-  subsets: ['latin'],
-  weight: '600',
-});
-
-const fraunces = Fraunces({
-  subsets: ['latin'],
-  weight: '700',
-});
+import { fraunces } from '@/utils/fonts';
 
 type clientTestimonyProps = {
   profilePicture: StaticImageData;
@@ -34,7 +24,7 @@ const ClientTestimony: FC<clientTestimonyProps> = ({ profilePicture, name, profi
           
         />
       </div>
-      <div className={`${styles.testimony} ${barlow.className}`}>
+      <div className={styles.testimony}>
         {children}
       </div>
       <div className={`${styles.name} ${fraunces.className}`}>{name}</div>

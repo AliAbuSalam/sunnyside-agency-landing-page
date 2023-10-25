@@ -1,6 +1,5 @@
 import '@/styles/globals.scss';
 import type { Metadata } from 'next'
-import { Barlow } from 'next/font/google'
 
 //--------------------- settings for fontawesome-------------------
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -10,11 +9,7 @@ config.autoAddCss = false
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-
-const barlow = Barlow({ 
-  subsets: ['latin'],
-  weight: '600' 
-});
+import { barlow } from '@/utils/fonts';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -27,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={barlow.className}>
       <body>
         <Navbar />
         {children}

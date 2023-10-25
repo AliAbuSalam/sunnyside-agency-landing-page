@@ -5,6 +5,9 @@
   padding: 2rem 1.5rem;
   box-sizing: border-box;
 
+  & > h1 {
+    font-weight: 900;
+  }
   .header {
     color: colors.$very-dark-desaturated-blue
   }
@@ -26,6 +29,7 @@
       grid-row: 1;
       text-decoration: none;
       color: colors.$very-dark-desaturated-blue;
+      font-weight: 700;
     }
   
     .highlighter {
