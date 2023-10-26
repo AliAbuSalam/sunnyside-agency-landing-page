@@ -50,13 +50,13 @@ const NavOptions:FC<navOptionsProps> = ({ options, toggleMenu, setToggleMenu, dr
       {useSummarizedNavOptions ?
         <FontAwesomeIcon 
           icon={faBars} 
-          size='xl' 
+          size='xl'
           onClick={handleMenuClick}
           onMouseDown={handleMenuPressed}
           className={`${toggleMenu ? styles['greyed-out'] : ''} ${styles['menu-icon']}`}
       /> 
       :<div className={styles['options-container']}>
-        {options.map(option => <div key={option} className={styles.option}>{option}</div>)}
+        {options.map(option => <div key={option} title={option} className={styles.option}>{option}</div>)}
       </div>
       
       }
