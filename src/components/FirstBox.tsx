@@ -4,6 +4,7 @@ import styles from '@/styles/firstBox.module.scss';
 import WhiteArrow from './WhiteArrow';
 import DesktopHeader from '../../public/desktop/image-header.jpg';
 import { fraunces } from '@/utils/fonts';
+import Navbar from './Navbar';
 
 const FirstBox = () => {
     return(
@@ -20,6 +21,7 @@ const FirstBox = () => {
         />
       </div>
       <div className={styles.content}>
+        <Navbar/>
         <h1 className={`${styles.h1} ${fraunces.className}`}>
           WE ARE <br />CREATIVES
         </h1>
