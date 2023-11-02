@@ -1,11 +1,34 @@
 @use 'colors';
 
+$mobile-header-image-url: '../../public/mobile/image-header.jpg';
+$desktop-header-image-url: '../../public/desktop/image-header.jpg';
+
 .firstbox-container {
-  background-image: url('../../public/mobile/image-header.jpg');
-  background-size: cover;
-  background-position: bottom;
+  // background-image: url($mobile-header-image-url);
+  // background-size: cover;
+  // background-position: bottom;
   padding-top: 2.5rem;
   margin: 0;
+  display: grid;
+
+  .background-container {
+    width: 100vw;
+    height: 100%;
+    height: auto;
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+
+    .background {
+      position: relative;
+    }
+  }
+
+  .content {
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+  }
 
   .img-container {
     background-image: none;
@@ -21,14 +44,16 @@
       width: 50%;
       height: auto;   
     }
-
   }
 
   .h1 {
     color: colors.$white;
     text-align: center;
     letter-spacing: 0.5rem;
+    padding: 0;
     margin: 0;
     font-weight: 900;
+    z-index: 1;
+    position: relative;
   }
 }
