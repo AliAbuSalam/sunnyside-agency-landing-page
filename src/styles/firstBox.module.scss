@@ -7,19 +7,20 @@ $desktop-header-image-url: '../../public/desktop/image-header.jpg';
   // background-image: url($mobile-header-image-url);
   // background-size: cover;
   // background-position: bottom;
-  padding-top: 2.5rem;
   margin: 0;
   display: grid;
 
   .background-container {
-    width: 100vw;
-    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     height: auto;
     position: relative;
     grid-column: 1;
     grid-row: 1;
 
     .background {
+      display: block;
       position: relative;
     }
   }
