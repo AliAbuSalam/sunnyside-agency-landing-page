@@ -4,12 +4,10 @@ import styles from '@/styles/secondBox.module.scss';
 
 const SecondBox = () => {
   return(
-    <div className={styles.container}>
-      <BoxWithOnlyBackground
-        imgSrc={Egg}
-        alt='image of an egg'
-      />
-    </div>
+    <BoxWithOnlyBackground
+      imgSrc={Egg}
+      alt='image of an egg'
+    />
   );
 };
 
