@@ -22,7 +22,7 @@ const Home = () => {
       <div className={styles.third}>
         <ThirdBox />
       </div>
-      <div>
+      <div className={styles.fourth}>
         <FourthBox />
       </div>
       <div>
