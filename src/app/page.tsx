@@ -25,7 +25,7 @@ const Home = () => {
       <div className={styles.fourth}>
         <FourthBox />
       </div>
-      <div>
+      <div className={styles.fifth}>
         <FifthBox />
       </div>
       <div>
