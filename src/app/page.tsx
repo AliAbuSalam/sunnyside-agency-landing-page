@@ -19,7 +19,7 @@ const Home = () => {
       <div className={styles.second}>
         <SecondBox />
       </div>
-      <div>
+      <div className={styles.third}>
         <ThirdBox />
       </div>
       <div>
