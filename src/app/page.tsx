@@ -31,7 +31,7 @@ const Home = () => {
       <div className={styles.sixth}>
         <SixthBox />
       </div>
-      <div>
+      <div className={styles.seventh}>
         <SeventhBox />
       </div>
       <div>
