@@ -13,7 +13,7 @@ import NinthBox from "@/components/NinthBox";
 const Home = () => {
   return(
     <div className={styles.container}>
-      <div>
+      <div className={styles.first}>
         <FirstBox />
       </div>
       <div className={styles.second}>
@@ -37,7 +37,7 @@ const Home = () => {
       <div className={styles.eighth}>
         <EighthBox />
       </div>
-      <div>
+      <div className={styles.ninth}>
         <NinthBox />
       </div>
     </div>
