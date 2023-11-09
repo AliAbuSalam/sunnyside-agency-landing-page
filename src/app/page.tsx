@@ -34,7 +34,7 @@ const Home = () => {
       <div className={styles.seventh}>
         <SeventhBox />
       </div>
-      <div>
+      <div className={styles.eighth}>
         <EighthBox />
       </div>
       <div>
