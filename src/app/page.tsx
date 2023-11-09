@@ -28,7 +28,7 @@ const Home = () => {
       <div className={styles.fifth}>
         <FifthBox />
       </div>
-      <div>
+      <div className={styles.sixth}>
         <SixthBox />
       </div>
       <div>
