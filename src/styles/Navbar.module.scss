@@ -77,3 +77,13 @@
 .greyed-out {
   opacity: 50%;
 }
+
+@media screen and (min-width: 1440px) {
+  .nav-container {
+    span {
+      font-size: 1.8rem;
+      font-weight: bold;
+      padding-left: 1rem;
+    }
+  }
+}
