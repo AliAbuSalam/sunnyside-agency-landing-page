@@ -29,7 +29,7 @@ const FirstBox = () => {
       <div className={styles.content}>
         <Navbar/>
         <h1 className={`${styles.h1} ${fraunces.className}`}>
-          WE ARE <br />CREATIVES
+          <span>WE ARE</span> CREATIVES
         </h1>
         <div className={styles['img-container']}>
           <WhiteArrow 
