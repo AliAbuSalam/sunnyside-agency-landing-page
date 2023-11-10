@@ -56,5 +56,11 @@ $desktop-header-image-url: '../../public/desktop/image-header.jpg';
     font-weight: 900;
     z-index: 1;
     position: relative;
+
+    @media screen and (max-width: 400px) {
+      span::after {
+        content: '\a';
+      }
+    }
   }
 }
