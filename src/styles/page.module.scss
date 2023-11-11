@@ -3,45 +3,10 @@
   grid-template-columns: 1fr;
 }
 
-.first {
-  grid-area: first;
-}
-
-.second {
-  grid-area: second;
-}
-
-.third {
-  grid-area: third;
-}
-
-.fourth {
-  grid-area: fourth;
-}
-
-.fifth {
-  grid-area: fifth;
-}
-
-.sixth {
-  grid-area: sixth;
-}
-
-.seventh {
-  grid-area: seventh;
-}
-
-.eighth {
-  grid-area: eighth;
-}
-
-.ninth {
-  grid-area: ninth;
-}
 
 @media screen and (min-width: 1000px) {
   .container {
-    grid-template-columns: 50vw 50vw;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:  
       'first first'
       'third  second'
@@ -50,4 +15,41 @@
       'eighth eighth'
       'ninth ninth'
   }
+
+  .first {
+    grid-area: first;
+  }
+  
+  .second {
+    grid-area: second;
+  }
+  
+  .third {
+    grid-area: third;
+  }
+  
+  .fourth {
+    grid-area: fourth;
+  }
+  
+  .fifth {
+    grid-area: fifth;
+  }
+  
+  .sixth {
+    grid-area: sixth;
+  }
+  
+  .seventh {
+    grid-area: seventh;
+  }
+  
+  .eighth {
+    grid-area: eighth;
+  }
+  
+  .ninth {
+    grid-area: ninth;
+  }
+  
 }
