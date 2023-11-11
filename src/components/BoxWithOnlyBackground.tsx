@@ -15,8 +15,8 @@ const BoxWithOnlyBackground:FC<boxProps> = ({ imgSrc, alt }) => {
         alt={alt}
         src={imgSrc}
         className={styles.img}
-        layout='responsive'
         sizes='(max-width: 351px) 350px'
+        style={{ width: '100%', height: 'auto' }}
       />
     </div>
   );
