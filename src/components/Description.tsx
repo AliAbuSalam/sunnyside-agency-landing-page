@@ -16,17 +16,19 @@ const Description: FC<DescriptionProps> =
 ({ header, hyperlink, highlightColor, headerStyle, descriptionStyle, children}) => {
   return(
     <div className={styles.container}>
-      <h1 className={`${fraunces.className} ${styles.header}`} style={headerStyle}>
-        {header}
-      </h1>
-      <div className={`${styles.description}`} style={descriptionStyle}>
-        {children}
-      </div>
-      <div className={styles['link-container']}>
-        <a href={hyperlink} className={`${fraunces.className} ${styles.link}`}>
-          LEARN MORE
-        </a>
-        <div className={styles.highlighter} style={{ backgroundColor: highlightColor}}></div>
+      <div className={styles['content-container']}>
+        <h1 className={`${fraunces.className} ${styles.header}`} style={headerStyle}>
+          {header}
+        </h1>
+        <div className={`${styles.description}`} style={descriptionStyle}>
+          {children}
+        </div>
+        <div className={styles['link-container']}>
+          <a href={hyperlink} className={`${fraunces.className} ${styles.link}`}>
+            LEARN MORE
+          </a>
+          <div className={styles.highlighter} style={{ backgroundColor: highlightColor}}></div>
+        </div>
       </div>
     </div>
   );

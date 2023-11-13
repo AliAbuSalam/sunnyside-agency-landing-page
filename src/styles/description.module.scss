@@ -1,55 +1,76 @@
 @use 'colors';
+@use '../lib/screenSizes.scss';
 
 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   text-align: center;
   padding: 2rem 1.5rem;
   box-sizing: border-box;
 
-  & > h1 {
-    font-weight: 900;
-  }
-  .header {
-    color: colors.$very-dark-desaturated-blue
-  }
-
-  .description {
-    color: colors.$dark-grayish-blue;
-    line-height: 1.8rem;
-    padding: 0;
-  }
-
-  .link-container {
-    width: 40%;
-    margin: 2rem auto;
-    display: grid;
-    align-items: center;
-    
-    .link {
-      grid-column: 1;
-      grid-row: 1;
-      text-decoration: none;
-      color: colors.$very-dark-desaturated-blue;
-      font-weight: 700;
+  .content-container {
+    & > h1 {
+      font-weight: 900;
+    }
+    .header {
+      color: colors.$very-dark-desaturated-blue
     }
   
-    .highlighter {
-      grid-column: 1;
-      grid-row: 1;
-      z-index: -1;
-      position: relative;
-      top: 0.4rem;
-      width: 100%;
-      height: 0.5rem;
-      border-radius: 20px;
-      background-color: red;
-      opacity: 50%;
+    .description {
+      color: colors.$dark-grayish-blue;
+      line-height: 1.8rem;
+      padding: 0;
+    }
+  
+    .link-container {
+      width: 8rem;
+      margin: 2rem auto;
+      display: grid;
+      align-items: center;
+      text-align: center;
+      
+      .link {
+        grid-column: 1;
+        grid-row: 1;
+        text-decoration: none;
+        color: colors.$very-dark-desaturated-blue;
+        font-weight: 700;
+      }
+    
+      .highlighter {
+        grid-column: 1;
+        grid-row: 1;
+        z-index: -1;
+        position: relative;
+        top: 0.4rem;
+        width: 100%;
+        height: 0.5rem;
+        border-radius: 20px;
+        background-color: red;
+        opacity: 50%;
+      }
+    }
+  
+    .link-container:hover {
+      .highlighter {
+        opacity: 100%;
+      }
     }
   }
+}
 
-  .link-container:hover {
-    .highlighter {
-      opacity: 100%;
+@media screen and (min-width: screenSizes.$SCREEN_WIDTH_LAPTOP) {
+  .container {
+    text-align: left;
+
+    .content-container {
+      max-width: 60%;
+
+      .link-container {
+        margin: 2rem 0;
+      }
     }
   }
-
 }
