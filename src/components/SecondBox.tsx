@@ -1,11 +1,19 @@
 import BoxWithOnlyBackground from './BoxWithOnlyBackground';
 import Egg from '../../public/mobile/image-transform.jpg';
-import styles from '@/styles/secondBox.module.scss';
+import EggDesktop from '../../public/desktop/image-transform.jpg';
+import PictureTest from '../../public/desktop/image-stand-out.jpg';
+import { SCREEN_WIDTH_PHONE } from '@/lib/screenSizes';
 
 const SecondBox = () => {
+  const sourceSet = [{
+    img: Egg,
+    media: `(max-width: ${SCREEN_WIDTH_PHONE + 1}px)`
+  }];
+
   return(
     <BoxWithOnlyBackground
-      imgSrc={Egg}
+      sourceSet={sourceSet}
+      defaultImg={EggDesktop}
       alt='image of an egg'
     />
   );
