@@ -1,7 +1,9 @@
 @use 'colors';
+@use '../lib/screenSizes.scss';
 
 .container {
   display: grid;
+  position: relative;
 
   .background-container {
     grid-column: 1;
@@ -16,10 +18,11 @@
   }
 
   .text-container {
+    position: absolute;
     grid-column: 1;
     grid-row: 1;
     text-align: center;
-    margin-top: 105%;
+    bottom: 3rem;
 
     & > h2 {
       font-weight: 900;
@@ -29,5 +32,12 @@
   .text {
     padding: 0.5rem;
     line-height: 1.5rem;
+  }
+}
+
+@media screen and (min-width: screenSizes.$SCREEN_WIDTH_LAPTOP) {
+  .text-container {
+    place-self: center;
+    width: 50%;
   }
 }
