@@ -21,7 +21,6 @@ const ClientTestimony: FC<clientTestimonyProps> = ({ profilePicture, name, profi
           src={profilePicture}
           alt={profileAlt || defaultProfileAlt}
           fill
-          
         />
       </div>
       <div className={styles.testimony}>
