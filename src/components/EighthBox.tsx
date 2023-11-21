@@ -31,12 +31,17 @@ const clientsData = [
     testimony: <>Incredible end result! Our sales increased over 400% when we 
       worked with Sunnyside. Highly recommended!</>
   }
-]
+];
 
 const EighthBox = () => {
   return(
     <div className={styles.container}>
-      <h4 className={fraunces.className}>CLIENT TESTIMONIALS</h4>
+      <h3 className={`${fraunces.className} ${styles['header-on-desktop']} ${styles.header}`}>
+        CLIENT TESTIMONIALS
+      </h3>
+      <h4 className={`${fraunces.className} ${styles['header-on-mobile']} ${styles.header}`}>
+        CLIENT TESTIMONIALS
+      </h4>
       <div className={styles['testimonial-container']}>
         {clientsData.map(client => (
           <ClientTestimony
