@@ -13,7 +13,6 @@ interface boxProps {
 }
 
 const BoxWithOnlyBackground:FC<boxProps> = ({ defaultImg, alt, sourceSet }) => {
-  console.log('sourceSet: ', sourceSet)
   return(
     <div className={styles['img-container']}>
       <picture>
