@@ -38,3 +38,10 @@
     height: 5rem;
   }
 }
+
+@media screen and (min-width: screenSizes.$SCREEN_WIDTH_LAPTOP) {
+  .testimony {
+    width: 70%;
+    margin: 3rem auto;
+  }
+}
