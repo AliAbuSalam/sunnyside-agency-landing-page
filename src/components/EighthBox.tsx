@@ -36,12 +36,14 @@ const clientsData = [
 const EighthBox = () => {
   return(
     <div className={styles.container}>
-      <h3 className={`${fraunces.className} ${styles['header-on-desktop']} ${styles.header}`}>
-        CLIENT TESTIMONIALS
-      </h3>
-      <h4 className={`${fraunces.className} ${styles['header-on-mobile']} ${styles.header}`}>
-        CLIENT TESTIMONIALS
-      </h4>
+      <div className={styles['header-container']}>
+        <h2 className={`${fraunces.className} ${styles['header-on-desktop']} ${styles.header}`}>
+          CLIENT TESTIMONIALS
+        </h2>
+        <h4 className={`${fraunces.className} ${styles['header-on-mobile']} ${styles.header}`}>
+          CLIENT TESTIMONIALS
+        </h4>
+      </div>
       <div className={styles['testimonial-container']}>
         {clientsData.map(client => (
           <ClientTestimony
