@@ -33,7 +33,7 @@ const NinthBox = () => {
           <Image 
             src={image.src}
             alt={image.alt}
-            fill
+            className={styles.image}
           />
         </div>
       )}
