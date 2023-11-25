@@ -6,6 +6,7 @@ import DesktopHeader from '../../public/desktop/image-header.jpg';
 import MobileHeader from '../../public/mobile/image-header.jpg';
 import { fraunces } from '@/utils/fonts';
 import Navbar from './Navbar';
+import { SCREEN_WIDTH_LAPTOP } from '@/lib/screenSizes';
 
 
 const FirstBox = () => {
@@ -13,7 +14,7 @@ const FirstBox = () => {
     <div className={styles['firstbox-container']}>
       <div className={styles['background-container']}>
         <picture>
-          <source srcSet={MobileHeader.src} media='(max-width: 400px)'/>
+          <source srcSet={MobileHeader.src} media={`(max-width: ${SCREEN_WIDTH_LAPTOP}px)`}/>
           <Image 
               src={DesktopHeader}
               alt='picture of oranges'
