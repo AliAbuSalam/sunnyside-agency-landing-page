@@ -8,7 +8,7 @@ import {
 
 import styles from '@/styles/footer.module.scss';
 
-const linkList = ['About', 'Service', 'Projects']
+const linkList = ['About', 'Services', 'Projects']
 
 const iconList = [
   faFacebookSquare,
