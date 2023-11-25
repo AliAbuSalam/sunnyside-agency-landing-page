@@ -1,4 +1,5 @@
 @use 'colors';
+@use '../lib/screenSizes.scss';
 
 .hidden {
   display: none
@@ -8,7 +9,7 @@
   opacity: 50%;
 }
 
-@media (min-width: 352px){
+@media (min-width: screenSizes.$SCREEN_WIDTH_LAPTOP){
   .options-container {
     display: flex;
     flex-direction: row;

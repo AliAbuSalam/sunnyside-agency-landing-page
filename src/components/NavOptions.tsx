@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import styles from '@/styles/navOptions.module.scss';
-import { SCREEN_WIDTH_PHONE } from '@/lib/screenSizes';
+import { SCREEN_WIDTH_LAPTOP } from '@/lib/screenSizes';
 
 interface navOptionsProps {
   options: string[];
@@ -30,7 +30,7 @@ const NavOptions:FC<navOptionsProps> = ({ options, toggleMenu, setToggleMenu, dr
   const handleResizeWindow = () => {
     if(typeof document === 'undefined') return;
     const documentWidth = document.documentElement.clientWidth;
-    if(documentWidth <= SCREEN_WIDTH_PHONE){
+    if(documentWidth < SCREEN_WIDTH_LAPTOP){
       setUseSummarizedNavOptions(true);
     } else {
       setUseSummarizedNavOptions(false);
