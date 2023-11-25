@@ -9,7 +9,7 @@
   background-color: colors.$lighter-cyan;
   text-align: center;
   color: colors.$dark-moderate-cyan;
-  
+    
   h1 {
     margin: 0;
     padding-top: 3rem;
@@ -18,8 +18,10 @@
   }
 
   .link-container {
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
+    max-width: 25rem;
 
     .link:hover {
       @include hover-effect();
