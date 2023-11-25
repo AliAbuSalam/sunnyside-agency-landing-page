@@ -1,12 +1,10 @@
 @use 'colors';
+@use '../lib/screenSizes.scss';
 
 $mobile-header-image-url: '../../public/mobile/image-header.jpg';
 $desktop-header-image-url: '../../public/desktop/image-header.jpg';
 
 .firstbox-container {
-  // background-image: url($mobile-header-image-url);
-  // background-size: cover;
-  // background-position: bottom;
   margin: 0;
   display: grid;
 
@@ -34,9 +32,7 @@ $desktop-header-image-url: '../../public/desktop/image-header.jpg';
   .img-container {
     background-image: none;
     margin: 0;
-    padding-top: 2rem;
-    width: 100%;
-    height: 15rem;
+    margin-top: 20vw;
 
     .image {
       fill: colors.$white;
@@ -53,14 +49,31 @@ $desktop-header-image-url: '../../public/desktop/image-header.jpg';
     letter-spacing: 0.5rem;
     padding: 0;
     margin: 0;
+    margin-top: 3rem;
     font-weight: 900;
     z-index: 1;
     position: relative;
+    white-space: pre-wrap;
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 550px) {
       span::after {
-        content: '\a';
+        content: '\A';
       }
+    }
+  }
+}
+
+
+@media screen and (min-width: screenSizes.$SCREEN_WIDTH_LAPTOP){
+  .firstbox-container {
+    .img-container {
+      .image {
+        width: 10rem;
+      }
+    }
+
+    .h1 {
+      font-size: 3rem;
     }
   }
 }
