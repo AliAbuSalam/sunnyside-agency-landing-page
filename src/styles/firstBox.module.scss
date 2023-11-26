@@ -67,13 +67,15 @@ $desktop-header-image-url: '../../public/desktop/image-header.jpg';
 @media screen and (min-width: screenSizes.$SCREEN_WIDTH_LAPTOP){
   .firstbox-container {
     .img-container {
+      margin-top: 8vw;
       .image {
-        width: 10rem;
+        width: 15rem;
       }
     }
 
     .h1 {
       font-size: 3rem;
+      margin-top: 6rem;
     }
   }
 }
