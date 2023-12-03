@@ -14,6 +14,13 @@
     display: flex;
     flex-direction: row;
     float: right;
+
+    .option-button {
+      margin-right: 1.5rem;
+      cursor: pointer;
+      padding: 0.75rem 1rem;
+      text-align: center;
+    }
   
     .option {
       margin-right: 1.5rem;
@@ -23,18 +30,18 @@
       text-align: center;
     }
 
-    .option:hover {
+
+    .contact {
+      font-size: 0.9rem;
+      padding: 1rem 1.5rem;
+      border-radius: 35px;
       background-color: colors.$white;
       color: black;
-      text-transform: uppercase;
     }
     
-    .option::before {
-      display: block;
-      height: 0;
-      content: attr(title);
-      text-transform: uppercase;
-      visibility: hidden;
+    .contact:hover {
+      color: colors.$white;
+      background-color: colors.$lighter-background-blue;
     }
   }
 }

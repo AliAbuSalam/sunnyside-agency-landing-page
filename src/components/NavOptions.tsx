@@ -5,6 +5,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import styles from '@/styles/navOptions.module.scss';
 import { SCREEN_WIDTH_LAPTOP } from '@/lib/screenSizes';
+import { fraunces } from '@/utils/fonts';
 
 interface navOptionsProps {
   options: string[];
@@ -56,7 +57,15 @@ const NavOptions:FC<navOptionsProps> = ({ options, toggleMenu, setToggleMenu, dr
           className={`${toggleMenu ? styles['greyed-out'] : ''} ${styles['menu-icon']}`}
       /> 
       :<div className={styles['options-container']}>
-        {options.map(option => <div key={option} title={option} className={styles.option}>{option}</div>)}
+        {options.map(option => 
+          <div 
+            key={option} 
+            title={option} 
+            className={`${styles['option-button']}`}
+          >
+            {option}
+          </div>)}
+        <div className={`${styles['option-button']} ${styles.contact} ${fraunces.className}`}>CONTACT</div>
       </div>
       
       }

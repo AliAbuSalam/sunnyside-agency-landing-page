@@ -5,7 +5,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import NavOptions from './NavOptions';
 import styles from '@/styles/Navbar.module.scss';
 
-const dropdownOptions = ['About', 'Services', 'Projects', 'Contact'];
+const dropdownOptions = ['About', 'Services', 'Projects',];
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
