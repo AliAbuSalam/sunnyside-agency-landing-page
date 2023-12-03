@@ -20,6 +20,7 @@ const ClientTestimony: FC<clientTestimonyProps> = ({ profilePicture, name, profi
         <Image 
           src={profilePicture}
           alt={profileAlt || defaultProfileAlt}
+          sizes='100vw'
           fill
         />
       </div>
