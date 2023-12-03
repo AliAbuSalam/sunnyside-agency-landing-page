@@ -64,10 +64,14 @@
     margin-bottom: 1rem;
   }
 
-  .dropdown-option:hover {
+  .contact-button {
     background-color: colors.$yellow;
     color: black;
-    text-transform: uppercase;
+    font-size: 0.8em;
+  }
+
+  .contact-button:hover {
+    background-color: colors.$lighter-yellow;
   }
 }
 

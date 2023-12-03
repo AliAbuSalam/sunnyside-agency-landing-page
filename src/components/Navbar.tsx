@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 
 import NavOptions from './NavOptions';
 import styles from '@/styles/navbar.module.scss';
+import { fraunces } from '@/utils/fonts';
 
 const dropdownOptions = ['About', 'Services', 'Projects',];
 
@@ -47,7 +48,9 @@ const Navbar = () => {
           {dropdownOptions.map(opt => (
             <div key={opt} className={styles['dropdown-option']}>{opt}</div>
           ))}
-          <div>CONTACT</div>
+          <div className={`${styles['dropdown-option']} ${styles['contact-button']} ${fraunces.className}`}>
+            CONTACT
+          </div>
         </div>
       </div>
     </div>
