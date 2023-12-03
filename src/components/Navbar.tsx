@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 import NavOptions from './NavOptions';
-import styles from '@/styles/Navbar.module.scss';
+import styles from '@/styles/navbar.module.scss';
 
 const dropdownOptions = ['About', 'Services', 'Projects',];
 
@@ -47,6 +47,7 @@ const Navbar = () => {
           {dropdownOptions.map(opt => (
             <div key={opt} className={styles['dropdown-option']}>{opt}</div>
           ))}
+          <div>CONTACT</div>
         </div>
       </div>
     </div>
