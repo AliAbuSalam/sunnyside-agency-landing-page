@@ -16,10 +16,18 @@
     float: right;
 
     .option-button {
+      transition: text-decoration-color 200ms ease-out;
+      text-decoration: underline;
+      text-decoration-thickness: 5px;
+      text-decoration-color: rgba(0, 0, 0, 0);
       margin-right: 1.5rem;
       cursor: pointer;
       padding: 0.75rem 1rem;
       text-align: center;
+    }
+
+    .option-button:hover {
+      text-decoration-color: white;
     }
   
     .option {
@@ -30,16 +38,17 @@
       text-align: center;
     }
 
-
     .contact {
+      transition: background-color 200ms, color 200ms;
       font-size: 0.9rem;
       padding: 1rem 1.5rem;
       border-radius: 35px;
       background-color: colors.$white;
       color: black;
     }
-    
+
     .contact:hover {
+      text-decoration: none;
       color: colors.$white;
       background-color: colors.$lighter-background-blue;
     }
