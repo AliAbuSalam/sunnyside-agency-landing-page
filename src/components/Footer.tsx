@@ -23,7 +23,7 @@ const Footer = () => {
       <h1>sunnyside</h1>
       <div className={styles['link-container']}>
         {linkList.map(link => (
-          <div key={link} className={styles.link}>{link}</div>
+          <a key={link} className={styles.link} href={`#${link.trim().toLowerCase()}`}>{link}</a>
         ))}
       </div>
       <div className={styles['icon-container']}>
