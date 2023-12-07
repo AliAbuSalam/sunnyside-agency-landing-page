@@ -16,6 +16,7 @@
     float: right;
 
     .option-button {
+      color: inherit;
       transition: text-decoration-color 200ms ease-out;
       text-decoration: underline;
       text-decoration-thickness: 5px;

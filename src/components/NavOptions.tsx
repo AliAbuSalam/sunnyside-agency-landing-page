@@ -58,13 +58,14 @@ const NavOptions:FC<navOptionsProps> = ({ options, toggleMenu, setToggleMenu, dr
       /> 
       :<div className={styles['options-container']}>
         {options.map(option => 
-          <div 
+          <a
             key={option} 
             title={option} 
             className={`${styles['option-button']}`}
+            href={`#${option.trim().toLowerCase()}`}
           >
             {option}
-          </div>)}
+          </a>)}
         <div className={`${styles['option-button']} ${styles.contact} ${fraunces.className}`}>CONTACT</div>
       </div>
       
