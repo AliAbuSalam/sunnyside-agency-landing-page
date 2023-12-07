@@ -18,6 +18,7 @@ const SixthBox = () => {
       defaultBackground={CherryDesktop}
       backgroundAlt="close up image of cherries"
       textColor={styles.color}
+      id='projects'
     >
       Great design makes you memorable. We deliver
       artwork that underscores your brand message

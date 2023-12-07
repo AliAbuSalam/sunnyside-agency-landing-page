@@ -10,12 +10,13 @@ interface DescriptionProps {
   headerStyle?: React.CSSProperties;
   descriptionStyle?: React.CSSProperties;
   children?: ReactNode;
+  id?: string;
 }
 
 const Description: FC<DescriptionProps> = 
-({ header, hyperlink, highlightColor, headerStyle, descriptionStyle, children}) => {
+({ header, hyperlink, highlightColor, headerStyle, descriptionStyle, children, id}) => {
   return(
-    <div className={styles.container}>
+    <div className={styles.container} id={id}>
       <div className={styles['content-container']}>
         <h1 className={`${fraunces.className} ${styles.header}`} style={headerStyle}>
           {header}

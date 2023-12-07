@@ -9,6 +9,7 @@ const ThirdBox = () => {
       header={header}
       hyperlink=''
       highlightColor={styles.yellow}
+      id='about'
     >
       We are a full-service creative agency specializing in helping brands grow fast. 
       Engage your client through compelling visuals that do most of the marketing for you.

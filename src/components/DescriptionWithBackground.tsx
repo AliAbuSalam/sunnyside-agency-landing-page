@@ -14,6 +14,7 @@ type DescWithBackgroundProps = {
   backgroundAlt: string;
   children: ReactNode;
   textColor?: string;
+  id?: string;
 }
 
 
@@ -23,10 +24,11 @@ const DescriptionWithBackground:FC<DescWithBackgroundProps> = ({
   defaultBackground,
   backgroundAlt,
   children,
-  textColor 
+  textColor,
+  id 
   }) => {
   return(
-  <div className={styles.container}>
+  <div className={styles.container} id={id}>
     <picture className={styles['background-container']}>
       {sourceSet?.map((source, index) => <source key={index} srcSet={source.image.src} media={source.media}/>)}
       <Image 
