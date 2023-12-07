@@ -1,7 +1,6 @@
 import BoxWithOnlyBackground from './BoxWithOnlyBackground';
 import Egg from '../../public/mobile/image-transform.jpg';
 import EggDesktop from '../../public/desktop/image-transform.jpg';
-import PictureTest from '../../public/desktop/image-stand-out.jpg';
 import { SCREEN_WIDTH_PHONE } from '@/lib/screenSizes';
 
 const SecondBox = () => {
